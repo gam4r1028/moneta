@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Копейка — личный финансовый тренажёр: большой курс, умный список покупок, бюджет и симулятор жизни. Без регистрации, всё хранится на твоём устройстве.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F2F2F7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Копейка">
+  <meta name="format-detection" content="telephone=no">
+  <title>Копейка — финансовая грамотность на каждый день</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="./icons/favicon-64.png">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient-orb ambient-orb--blue"></span>
+    <span class="ambient-orb ambient-orb--purple"></span>
+    <span class="ambient-orb ambient-orb--green"></span>
+  </div>
+
+  <div class="app" id="app">
+    <main class="view" id="view" tabindex="-1" aria-live="polite">
+      <div class="boot">
+        <div class="boot-coin" aria-hidden="true">К</div>
+        <p>Загружаем Копейку…</p>
+      </div>
+    </main>
+
+    <nav class="tabbar" id="tabbar" aria-label="Основная навигация">
+      <a class="tab" href="#/home" data-tab="home" aria-label="Главная">
+        <span class="tab-icon" data-icon="home"></span><span class="tab-label">Главная</span>
+      </a>
+      <a class="tab" href="#/course" data-tab="course" aria-label="Курс">
+        <span class="tab-icon" data-icon="book"></span><span class="tab-label">Курс</span>
+      </a>
+      <a class="tab" href="#/shopping" data-tab="shopping" aria-label="Покупки">
+        <span class="tab-icon" data-icon="cart"></span><span class="tab-label">Покупки</span>
+      </a>
+      <a class="tab" href="#/budget" data-tab="budget" aria-label="Бюджет">
+        <span class="tab-icon" data-icon="wallet"></span><span class="tab-label">Бюджет</span>
+      </a>
+      <a class="tab" href="#/profile" data-tab="profile" aria-label="Профиль">
+        <span class="tab-icon" data-icon="user"></span><span class="tab-label">Профиль</span>
+      </a>
+    </nav>
+  </div>
+
+  <div id="sheet-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+  <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
+  <noscript>
+    <div class="noscript">Для работы «Копейки» нужен JavaScript. Включи его в настройках браузера.</div>
+  </noscript>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
